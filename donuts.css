@@ -1,126 +1,128 @@
+.header-span {
+  display: block;
+  font-weight: 100;
+}
 
-  
-  .header-span {
-    display: block;
-    font-weight: 100;
-  }
-  
-  hr { 
-    max-width: 5em; 
-    margin-bottom: 30px; 
-  }
-  
-  .all-the-foods {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  div.clip-path-container {
-    display: inline-block;
-    position: relative;
-    height: 250px;
-    width: 250px;
-    margin: 10px ;
-    padding: 3px;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    overflow: hidden;  
-    border-radius: 50%;
-    border-collapse: separate; 
-    background-color: #222;
-  }
-  
-  .clip-path-container:focus,
-  .clip-path-container:active,
-  .clip-path-container:hover {
-    border-radius: 50%;
-    outline: none;
-  } 
-  
-  .food {
-    height: 250px;
-    width: 250px;
-    background-size: cover;
-    transition: all .2s ease-in-out;
-    transform: scale(1.5); 
-    outline: none;
-    overflow: hidden;  
-    clip-path: polygon(0 100%, 0 0, 52% 0, 52% 100%);
-    clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-  }
-  
-  
-  .clip-path-container:hover .food {
+hr {
+  max-width: 5em;
+  margin-bottom: 30px;
+}
+
+.all-the-foods {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.clip-path-container {
+  display: inline-block;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  margin: 10px;
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  border-radius: 50%;
+  border-collapse: separate;
+  background-color: #222;
+}
+
+.clip-path-container:focus,
+.clip-path-container:active,
+.clip-path-container:hover {
+  border-radius: 80%;
+  outline: none;
+}
+
+.food {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.5);
+  outline: none;
+  overflow: hidden;
+  clip-path: polygon(0 100%, 0 0, 52% 0, 52% 100%);
+  clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+}
+
+.clip-path-container:hover .food {
+  clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+  transform: scale(1.1);
+}
+
+.clip-path-container:hover .description-holder {
+  left: 20px;
+  opacity: 1;
+}
+
+.description-holder {
+  position: absolute;
+  top: 35px;
+  left: 120px;
+  height: 300px;
+  width: 100px;
+  transition: all 0.4s ease-in-out;
+  transition-delay: 0.1s;
+  opacity: 0;
+  text-align: right;
+}
+
+/* .guac-holder {
+  top: 45px;
+} */
+
+.description-holder h4 {
+  font-size: 14px;
+  margin-bottom: -8px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.description-holder p {
+  max-width: 100px;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: none;
+  color: wheat;
+  margin-bottom: -10px;
+}
+
+.guacamole {
+  background-image: url('./img/donutsChocolate1.jpg');
+  background-position: 50% 90%;
+}
+
+.cookie {
+  background-image: url('./img/donutsOreo.png');
+  background-position: 50% 10%;
+  background-color: #fff;
+}
+
+.donut {
+  background-image: url('./img/donutsTradicional.jpg');
+  background-position: 80% -80%;
+}
+
+.pancake {
+  background-image: url('./img/donutMorango.webp');
+  background-position: 50% 90%;
+}
+
+.donut2 {
+  background-image: url('https://assets.codepen.io/1498478/dmtrmrv_a_photo_of_a_white_glazed_donut_top_down_on_a_white_bac_b5f0faf9-685b-4ce3-b828-4d6da5c20be4.webp');
+  background-position: 50% 90%;
+}
+
+@media (max-width: 992px) {
+  .clip-path-container .food {
     clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
     transform: scale(1.1);
-    
   }
-  
-  .clip-path-container:hover .description-holder { 
+  .clip-path-container .description-holder {
     left: 20px;
     opacity: 1;
   }
-  
-  .description-holder {
-    position: absolute;
-    top: 35px;
-    left: 120px;
-    height: 300px;
-    width: 100px;
-    transition: all .4s ease-in-out;
-    transition-delay: .1s;
-    opacity: 0;
-    text-align: right;
-  }
-  
-  /*.guac-holder {
-    top: 45px;
-  }*/
-  
-  .description-holder h4 {
-    font-size: 14px;
-    margin-bottom: -8px;
-    color: #fff;
-    margin-bottom: 5px;
-  }
-  
-  .description-holder p {
-    max-width: 100px;
-    font-size: 12px;
-    line-height: 14px;
-    text-transform: none;
-    color: wheat;
-    margin-bottom:-10px ;
-    
-  }
-  
-
-  
-  .guacamole {
-    background-image: url('./img/donutsChocolate1.jpg');
-    background-position: 50% 90%;
-    
-  }
-  
-  .cookie {
-    background-image: url('./img/donutsOreo.png');
-    background-position: 50% 10%;
-    background-color: #fff;
-  }
-  
-  .donut {
-    background-image: url('./img/donutsTradicional.jpg');
-    background-position: 80% -80%;
-  }
-  
-  .pancake {
-    background-image: url('./img/donutMorango.webp');
-    background-position: 50% 90%;
-  }
-
-  .donut2{
-    background-image: url('https://assets.codepen.io/1498478/dmtrmrv_a_photo_of_a_white_glazed_donut_top_down_on_a_white_bac_b5f0faf9-685b-4ce3-b828-4d6da5c20be4.webp');
-    background-position: 50% 90%;
-    
-  }
+}
